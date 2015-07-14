@@ -39,4 +39,4 @@ ENV JAVA_HOME /opt/java
 
 # EXEC
 CMD ["run"]
-ENTRYPOINT ["/opt/liferay-portal-6.1.2-ce-ga3tomcat-7.0.40/bin/catalina.sh"]
+ENTRYPOINT ["/opt/liferay-portal-6.1.2-ce-ga3/tomcat-7.0.40/bin/catalina.sh"]
