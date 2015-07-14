@@ -1,14 +1,15 @@
-# Docker image for liferay 6.2
-The image is build in docker registry : https://registry.hub.docker.com/u/snasello/liferay-6.2/
+# Docker image for liferay 6.1.2
+fork from https://registry.hub.docker.com/u/snasello/liferay-6.2/
+The image is build in docker registry : https://registry.hub.docker.com/u/zazrivec/docker-liferay-6.1.2/
 you can pull it :
 ```
-docker pull snasello/liferay-6.2:6.2-ce-ga4
+docker pull zazrivec/docker-liferay-6.1.2
 ```
 
 ## Start image
 you can start it directly, it will use the hsqldb (not for production!)
 ```
-docker run --rm -t -i -p 8080:8080 snasello/liferay-6.2:6.2-ce-ga4 
+docker run --rm -t -i -p 8080:8080 zazrivec/docker-liferay-6.1.2
 ```
 When you have the message "INFO: Server startup in xxx ms" you can open a browser and go to http://localhost:8080 (with boot2docker you must specify the ip, you can found it with # boot2docker ip)
 
@@ -22,7 +23,7 @@ docker run --name lep-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword -e MYSQL_USE
 
 Then start the liferay image with a link to the database
 ```
-docker run --rm -it -p 8080:8080 --link lep-mysql:db_lep -e DB_TYPE=MYSQL snasello/liferay-6.2:6.2-ce-ga4 
+docker run --rm -it -p 8080:8080 --link lep-mysql:db_lep -e DB_TYPE=MYSQL zazrivec/docker-liferay-6.1.2
 ```
 ### PostgreSQL
 First start the PostgreSQL image
@@ -40,5 +41,5 @@ postgres=# \q
 ```
 And start the liferay image with a link to the database
 ```
-docker run --rm -it -p 8080:8080 --link lep-postgresql:db_lep -e DB_TYPE=POSTGRESQL snasello/liferay-6.2:6.2-ce-ga4 
+docker run --rm -it -p 8080:8080 --link lep-postgresql:db_lep -e DB_TYPE=POSTGRESQL zazrivec/docker-liferay-6.1.2
 ```
