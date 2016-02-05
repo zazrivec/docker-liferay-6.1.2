@@ -27,7 +27,7 @@ RUN /bin/echo -e '\nCATALINA_OPTS="$CATALINA_OPTS -Dexternal-properties=portal-b
 ADD lep/portal-bundle.properties /opt/liferay-portal-6.1.2-ce-ga3/portal-bundle.properties
 ADD lep/portal-bd-MYSQL.properties /opt/liferay-portal-6.1.2-ce-ga3/portal-bd-MYSQL.properties
 ADD lep/portal-bd-POSTGRESQL.properties /opt/liferay-portal-6.1.2-ce-ga3/portal-bd-POSTGRESQL.properties
-ADD lep/portal-bd-POSTGRESQL.properties /opt/liferay-portal-6.1.2-ce-ga3/portal-bd-POSTGRESQL2.properties
+ADD lep/portal-bd-POSTGRESQL2.properties /opt/liferay-portal-6.1.2-ce-ga3/portal-bd-POSTGRESQL2.properties
 
 # volumes
 VOLUME ["/var/liferay-home", "/opt/liferay-portal-6.1.2-ce-ga3/"]
